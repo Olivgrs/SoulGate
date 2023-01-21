@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class ApplicationManager : MonoBehaviour {
 	
 	public GameObject Canva;
+	public GameObject SFScene;
 	public void Quit () 
 	{
 		#if UNITY_EDITOR
@@ -17,7 +18,8 @@ public class ApplicationManager : MonoBehaviour {
 	public void LoadFirstLevel()
     {
 		Canva.SetActive(false);
-        SceneManager.LoadScene("SolarSystem", LoadSceneMode.Additive);
+		SFScene.SetActive(false);
+        SceneManager.LoadScene("Game", LoadSceneMode.Additive);
     }
 
 
