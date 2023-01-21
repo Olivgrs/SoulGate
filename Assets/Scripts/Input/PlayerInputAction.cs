@@ -46,15 +46,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-<<<<<<< HEAD
-                    ""name"": ""Pause"",
-                    ""type"": ""Button"",
-                    ""id"": ""be85486b-fd72-45e7-b00f-57d0deb2a631"",
-=======
                     ""name"": ""DeverouillerPorte"",
                     ""type"": ""Button"",
                     ""id"": ""c5370116-031a-4c5e-8a22-d0574c574d0c"",
->>>>>>> main
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -196,21 +190,12 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-<<<<<<< HEAD
-                    ""id"": ""d522e38a-99fe-4b23-9f0e-ca52eaba2182"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard & Mouse"",
-                    ""action"": ""Pause"",
-=======
                     ""id"": ""ee675661-9338-42ce-91cc-1d917d2ff56f"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
                     ""action"": ""DeverouillerPorte"",
->>>>>>> main
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -240,11 +225,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_HorizontalMovement = m_Player.FindAction("HorizontalMovement", throwIfNotFound: true);
         m_Player_VerticalMovement = m_Player.FindAction("VerticalMovement", throwIfNotFound: true);
-<<<<<<< HEAD
-        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
-=======
         m_Player_DeverouillerPorte = m_Player.FindAction("DeverouillerPorte", throwIfNotFound: true);
->>>>>>> main
     }
 
     public void Dispose()
@@ -306,22 +287,14 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_HorizontalMovement;
     private readonly InputAction m_Player_VerticalMovement;
-<<<<<<< HEAD
-    private readonly InputAction m_Player_Pause;
-=======
     private readonly InputAction m_Player_DeverouillerPorte;
->>>>>>> main
     public struct PlayerActions
     {
         private @PlayerInputAction m_Wrapper;
         public PlayerActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @HorizontalMovement => m_Wrapper.m_Player_HorizontalMovement;
         public InputAction @VerticalMovement => m_Wrapper.m_Player_VerticalMovement;
-<<<<<<< HEAD
-        public InputAction @Pause => m_Wrapper.m_Player_Pause;
-=======
         public InputAction @DeverouillerPorte => m_Wrapper.m_Player_DeverouillerPorte;
->>>>>>> main
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -337,15 +310,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @VerticalMovement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
                 @VerticalMovement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
                 @VerticalMovement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
-<<<<<<< HEAD
-                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-=======
                 @DeverouillerPorte.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDeverouillerPorte;
                 @DeverouillerPorte.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDeverouillerPorte;
                 @DeverouillerPorte.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDeverouillerPorte;
->>>>>>> main
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -356,15 +323,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @VerticalMovement.started += instance.OnVerticalMovement;
                 @VerticalMovement.performed += instance.OnVerticalMovement;
                 @VerticalMovement.canceled += instance.OnVerticalMovement;
-<<<<<<< HEAD
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
-=======
                 @DeverouillerPorte.started += instance.OnDeverouillerPorte;
                 @DeverouillerPorte.performed += instance.OnDeverouillerPorte;
                 @DeverouillerPorte.canceled += instance.OnDeverouillerPorte;
->>>>>>> main
             }
         }
     }
@@ -382,10 +343,6 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     {
         void OnHorizontalMovement(InputAction.CallbackContext context);
         void OnVerticalMovement(InputAction.CallbackContext context);
-<<<<<<< HEAD
-        void OnPause(InputAction.CallbackContext context);
-=======
         void OnDeverouillerPorte(InputAction.CallbackContext context);
->>>>>>> main
     }
 }
