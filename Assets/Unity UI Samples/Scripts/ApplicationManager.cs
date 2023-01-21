@@ -18,7 +18,8 @@ public class ApplicationManager : MonoBehaviour {
 	public void LoadFirstLevel()
     {
 		Canva.SetActive(false);
-		SFScene.SetActive(false);
+		if(SFScene != null)
+			SFScene.SetActive(false);
         SceneManager.LoadScene("Game", LoadSceneMode.Additive);
     }
 

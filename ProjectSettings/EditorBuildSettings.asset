@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/Game.unity
     guid: 209812a4a24e14c7594fff112364df7b
   - enabled: 1
-    path: Assets/Scenes/QuentinScene.unity
-    guid: aa4834672b1495e42b7ee824a090601c
+    path: Assets/Scenes/Game/Loose.unity
+    guid: 565dc9ebc8437482d8df8f063fad402f
+  - enabled: 1
+    path: Assets/Scenes/Game/Win.unity
+    guid: 82e4b06b687c64d58b55aa25ea179b84
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: bcdbc2ac7607c114787d8323f19f6ab2,
       type: 2}

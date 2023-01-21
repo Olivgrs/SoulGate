@@ -73,7 +73,7 @@ public class EnemyScript : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other){
 		if(other.CompareTag("Player")){
-			SceneManager.LoadScene("Loose", LoadSceneMode.Additive);
+			SceneManager.LoadScene("Loose");
 		}
 	}
 }
