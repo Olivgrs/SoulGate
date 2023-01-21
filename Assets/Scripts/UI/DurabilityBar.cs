@@ -6,8 +6,9 @@ public class DurabilityBar : MonoBehaviour
 {
     public Slider slider;
     public float decrementSpeed = 1.0f;
-    public float decrementValue = 0.1f;
+    public float decrementValue = 0f;
     public GameObject ennemy;
+    public GameObject light;
 
     public void SetMaxDurability(int durability)
     {
@@ -25,8 +26,10 @@ public class DurabilityBar : MonoBehaviour
         while (slider.value > 0)
         {
             slider.value -= decrementValue;
-            if (slider.value == 0)
-                ennemy.SetActive(true);
+            if (slider.value <= 0)
+            {
+                light.SetActive(false);
+            }
             yield return new WaitForSeconds(decrementSpeed);
         }
     }
