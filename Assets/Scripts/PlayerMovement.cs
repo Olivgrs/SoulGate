@@ -1,17 +1,34 @@
 using UnityEngine;
+using System;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     float horizontalMovement, verticalMovement;
+    bool isInside = false;
 
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
 
+    private void Update()
+    {
+        
+    }
+
     void FixedUpdate()
     {
         MovePlayer(horizontalMovement, verticalMovement);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        isInside = true;
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        isInside = false;
     }
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
@@ -28,5 +45,13 @@ public class PlayerMovement : MonoBehaviour
     public void OnVerticalMovement(InputValue val)
     {
         verticalMovement = val.Get<float>() * moveSpeed * Time.fixedDeltaTime;
+    }
+
+    public void OnDeverouillerPorte(InputValue val)
+    {
+        if(isInside == true)
+        {
+            Debug.Log("Collision détectée et touche E pressée");
+        }
     }
 }
