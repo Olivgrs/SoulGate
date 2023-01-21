@@ -3,6 +3,7 @@ using System;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -75,15 +76,18 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
     }
 
-    public void DeverouillerPorte()
+    public void OnDeverouillerPorte()
     {
         if(isInsideLevier && !levierHasBeenPool)
-            levierHasBeenPool=true;
+        {
+            Debug.Log("Le levier est tirer");
+            levierHasBeenPool = true;
+        }
 
         if (isInsidePorte && levierHasBeenPool)
         {
-            text.text = "victoire";
-            text.enabled = true;
+            Debug.Log("C'est gagner");
+            SceneManager.LoadScene("Win");
         }
     }
 
