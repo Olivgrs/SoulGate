@@ -19,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        play.onClick.AddListener(UnPause);
-        pause.SetActive(false);
+        //play.onClick.AddListener(UnPause);
+        //pause.SetActive(false);
     }
 
     private void Update()
