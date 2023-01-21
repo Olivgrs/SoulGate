@@ -28918,6 +28918,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 609586281184184442, guid: 3cd072457f7ebe6428e59069fbffc180,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ennemi
+      objectReference: {fileID: 0}
     - target: {fileID: 1459696770162267045, guid: 3cd072457f7ebe6428e59069fbffc180,
         type: 3}
       propertyPath: target
@@ -80454,6 +80459,7 @@ GameObject:
   - component: {fileID: 1375599797}
   - component: {fileID: 1375599796}
   - component: {fileID: 1375599798}
+  - component: {fileID: 1375599799}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -80767,6 +80773,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audio: {fileID: 853814490}
+--- !u!114 &1375599799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375599788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9ef89b93c462141a6e8da4d2f87f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1377058679
 PrefabInstance:
   m_ObjectHideFlags: 0
