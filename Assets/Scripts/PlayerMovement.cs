@@ -2,12 +2,18 @@ using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
-    float horizontalMovement, verticalMovement;
-    bool isInside = false;
+    public float horizontalMovement, verticalMovement;
+    bool isInsidePorte = false;
+    bool isInsideLevier = false;
+    bool levierHasBeenPool = false;
+    bool porteIsOpen = false;
+
+    public TextMeshProUGUI text;
 
     public bool isPause = false;
 
@@ -52,18 +58,33 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        isInside = true;
+        if(collider.tag == "Levier" )
+            isInsideLevier = true;
+        if (collider.tag == "Porte")
+            isInsidePorte = true;
     }
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        isInside = false;
+        isInsideLevier = isInsidePorte = false;
     }
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
         Vector3 targetVelocity = new Vector2(_horizontalMovement, _verticalMovement);
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+    }
+
+    public void DeverouillerPorte()
+    {
+        if(isInsideLevier && !levierHasBeenPool)
+            levierHasBeenPool=true;
+
+        if (isInsidePorte && levierHasBeenPool)
+        {
+            text.text = "victoire";
+            text.enabled = true;
+        }
     }
 
     public void OnHorizontalMovement(InputValue val)
