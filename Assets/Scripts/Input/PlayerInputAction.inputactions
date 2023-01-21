@@ -24,9 +24,15 @@
                     "initialStateCheck": true
                 },
                 {
+<<<<<<< HEAD
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "be85486b-fd72-45e7-b00f-57d0deb2a631",
+=======
                     "name": "DeverouillerPorte",
                     "type": "Button",
                     "id": "c5370116-031a-4c5e-8a22-d0574c574d0c",
+>>>>>>> main
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -168,12 +174,21 @@
                 },
                 {
                     "name": "",
+<<<<<<< HEAD
+                    "id": "d522e38a-99fe-4b23-9f0e-ca52eaba2182",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "Pause",
+=======
                     "id": "ee675661-9338-42ce-91cc-1d917d2ff56f",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard & Mouse",
                     "action": "DeverouillerPorte",
+>>>>>>> main
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

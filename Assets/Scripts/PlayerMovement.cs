@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,9 +9,23 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMovement, verticalMovement;
     bool isInside = false;
 
+    public bool isPause = false;
+
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
 
+<<<<<<< HEAD
+    public Button play;
+    public GameObject pause;
+
+    private void Start()
+    {
+        play.onClick.AddListener(UnPause);
+        pause.SetActive(false);
+    }
+
+=======
+>>>>>>> main
     private void Update()
     {
         
@@ -47,11 +62,42 @@ public class PlayerMovement : MonoBehaviour
         verticalMovement = val.Get<float>() * moveSpeed * Time.fixedDeltaTime;
     }
 
+<<<<<<< HEAD
+    public void OnPause(InputValue val)
+    {
+        if (isPause)
+        {
+            UnPause();
+        }
+        else
+        {
+            Pause();
+        }
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0; //stop le temps
+
+        pause.SetActive(true);
+
+        isPause = true;
+    }
+
+    public void UnPause()
+    {
+        Time.timeScale = 1;
+
+        pause.SetActive(false);
+
+        isPause = false;
+=======
     public void OnDeverouillerPorte(InputValue val)
     {
         if(isInside == true)
         {
             Debug.Log("Collision détectée et touche E pressée");
         }
+>>>>>>> main
     }
 }
