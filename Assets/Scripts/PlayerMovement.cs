@@ -20,11 +20,28 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
 
+    // Ajoutez une référence au composant Sprite du joueur
+    public SpriteRenderer playerSprite;
+    // Ajoutez une référence au sprite que vous souhaitez utiliser
+    public Sprite newSprite;
+
+    // Ajoutez une référence au composant Animator du joueur
+    public Animator playerAnimator;
+    // Ajoutez une référence au nom de l'état d'animation associé au nouveau sprite
+    public string newAnimationState;
+
     public Button play;
     public GameObject pause;
 
     private void Start()
     {
+        if(konamiCode.konamiCodeComplete == true)
+        {
+            playerSprite.sprite = newSprite;
+            // Changez l'animation du joueur en utilisant la référence au composant Animator et le nom de l'état d'animation
+            playerAnimator.Play(newAnimationState);
+            Debug.Log("Changement effectué");
+        }
         //play.onClick.AddListener(UnPause);
         //pause.SetActive(false);
     }
