@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
-    float horizontalMovement, verticalMovement;
+    public float horizontalMovement, verticalMovement;
     bool isInside = false;
 
     public bool isPause = false;
