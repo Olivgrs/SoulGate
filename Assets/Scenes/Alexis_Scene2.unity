@@ -281,7 +281,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 55bf1c9e578e0c34caf5ba43faf15336, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 55bf1c9e578e0c34caf5ba43faf15336, type: 3
 --- !u!1 &770727021
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +302,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &770727021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3319443876508351137, guid: 55bf1c9e578e0c34caf5ba43faf15336, type: 3}
+  m_PrefabInstance: {fileID: 733082978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &770727022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,6 +669,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1222990173 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 654869979709642156, guid: 55bf1c9e578e0c34caf5ba43faf15336, type: 3}
+  m_PrefabInstance: {fileID: 733082978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1614139648
 PrefabInstance:
   m_ObjectHideFlags: 0
