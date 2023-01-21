@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     bool levierHasBeenPool = false;
     bool porteIsOpen = false;
 
+    public TextMeshProUGUI text;
 
     public bool isPause = false;
 
@@ -62,7 +64,10 @@ public class PlayerMovement : MonoBehaviour
             levierHasBeenPool=true;
 
         if (isInsidePorte && levierHasBeenPool)
-            porteIsOpen = true;
+        {
+            text.text = "victoire";
+            text.enabled = true;
+        }
     }
 
     public void OnHorizontalMovement(InputValue val)
