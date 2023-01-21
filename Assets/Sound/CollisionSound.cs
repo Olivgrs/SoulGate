@@ -21,4 +21,9 @@ public class CollisionSound : MonoBehaviour
     {
         audio.Play();
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        audio.Play();
+    }
 }
