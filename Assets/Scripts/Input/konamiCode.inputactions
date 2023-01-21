@@ -1,0 +1,146 @@
+{
+    "name": "konamiCode",
+    "maps": [
+        {
+            "name": "konamiCode",
+            "id": "0708e44a-c644-42bf-ba16-52f021f176f9",
+            "actions": [
+                {
+                    "name": "arrowUP",
+                    "type": "Button",
+                    "id": "540d1eb8-8c48-437a-9c8c-adc61cf7ae41",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "arrowDOWN",
+                    "type": "Button",
+                    "id": "df154880-544f-42a9-9cff-7dff63eac18b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "arrowLEFT",
+                    "type": "Button",
+                    "id": "48acc0aa-396a-4334-b601-21316b465fb5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "arrowRIGHT",
+                    "type": "Button",
+                    "id": "42363190-8748-4500-8931-65f8f57a2008",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BKey",
+                    "type": "Button",
+                    "id": "4e376e35-cdc9-4c0c-9cf4-399442fa8d1a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AKey",
+                    "type": "Button",
+                    "id": "f229977a-3af6-4f75-81e0-5374a464c286",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6c68d182-afc8-40a0-a34d-35c29d92b0b2",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "arrowUP",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a2a8192-b12a-4c6a-acf1-c8c5f6133ef0",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "arrowDOWN",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "76d3e0d6-931a-42bc-a658-f3365a262ee9",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "arrowLEFT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cee09947-0b56-4df7-b61b-e735b5254a1a",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "arrowRIGHT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "17d9b662-3c2c-4c22-b275-63b838add493",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f4a979b7-5a5a-4c03-bf46-4ec3cfe37601",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

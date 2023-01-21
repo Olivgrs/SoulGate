@@ -208,7 +208,6 @@ GameObject:
   m_Component:
   - component: {fileID: 369692170}
   - component: {fileID: 369692169}
-  - component: {fileID: 369692168}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -216,25 +215,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &369692168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369692167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &369692169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,7 +640,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.25, y: 6.25}
+    oldSize: {x: 2.5, y: 2.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -705,6 +685,10 @@ MonoBehaviour:
   moveSpeed: 250
   isPause: 0
   rb: {fileID: 860329817}
+  playerSprite: {fileID: 860329819}
+  newSprite: {fileID: 21300000, guid: 5496093941ea54b49905ba4f1b83189c, type: 3}
+  playerAnimator: {fileID: 860329821}
+  newAnimationState: Idle_KonamiCode
   play: {fileID: 0}
   pause: {fileID: 0}
 --- !u!212 &860329819
