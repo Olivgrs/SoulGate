@@ -1,13 +1,30 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     float horizontalMovement, verticalMovement;
 
+    public bool isPause = false;
+
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
+
+    public Button play;
+    public GameObject pause;
+
+    private void Start()
+    {
+        play.onClick.AddListener(UnPause);
+        pause.SetActive(false);
+    }
+
+    private void Update()
+    {
+        
+    }
 
     void FixedUpdate()
     {
@@ -28,5 +45,35 @@ public class PlayerMovement : MonoBehaviour
     public void OnVerticalMovement(InputValue val)
     {
         verticalMovement = val.Get<float>() * moveSpeed * Time.fixedDeltaTime;
+    }
+
+    public void OnPause(InputValue val)
+    {
+        if (isPause)
+        {
+            UnPause();
+        }
+        else
+        {
+            Pause();
+        }
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0; //stop le temps
+
+        pause.SetActive(true);
+
+        isPause = true;
+    }
+
+    public void UnPause()
+    {
+        Time.timeScale = 1;
+
+        pause.SetActive(false);
+
+        isPause = false;
     }
 }
