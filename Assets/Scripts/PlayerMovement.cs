@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -6,12 +7,14 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     float horizontalMovement, verticalMovement;
+    bool isInside = false;
 
     public bool isPause = false;
 
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
 
+<<<<<<< HEAD
     public Button play;
     public GameObject pause;
 
@@ -21,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
         pause.SetActive(false);
     }
 
+=======
+>>>>>>> main
     private void Update()
     {
         
@@ -29,6 +34,16 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         MovePlayer(horizontalMovement, verticalMovement);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        isInside = true;
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        isInside = false;
     }
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
@@ -47,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         verticalMovement = val.Get<float>() * moveSpeed * Time.fixedDeltaTime;
     }
 
+<<<<<<< HEAD
     public void OnPause(InputValue val)
     {
         if (isPause)
@@ -75,5 +91,13 @@ public class PlayerMovement : MonoBehaviour
         pause.SetActive(false);
 
         isPause = false;
+=======
+    public void OnDeverouillerPorte(InputValue val)
+    {
+        if(isInside == true)
+        {
+            Debug.Log("Collision détectée et touche E pressée");
+        }
+>>>>>>> main
     }
 }
