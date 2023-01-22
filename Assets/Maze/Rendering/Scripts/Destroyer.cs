@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destroyer : MonoBehaviour {
+public class Destroyer : MonoBehaviour
+{
 
-	void OnTriggerEnter2D(Collider2D other){
-		Destroy(other.gameObject);
-		
-	}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag != "Ennemi" && other.tag != "Player")
+            Destroy(other.gameObject);
+
+    }
 }
