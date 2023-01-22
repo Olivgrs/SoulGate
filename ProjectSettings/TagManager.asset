@@ -9,6 +9,7 @@ TagManager:
   - Porte
   - PlayerPos
   - Ennemi
+  - Collectable
   layers:
   - Default
   - TransparentFX
