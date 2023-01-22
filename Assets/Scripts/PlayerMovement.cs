@@ -105,7 +105,8 @@ public class PlayerMovement : MonoBehaviour
         {
             text.text = "Levier acctioné. Il vous faut ouvrir la porte sans vous faire attraper par le monstre.";
             levierHasBeenPool = true;
-            LevierSprite.changerSprite();
+            if (LevierSprite != null)
+                LevierSprite.changerSprite();
         }
 
         if (isInsidePorte)
