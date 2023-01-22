@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        text.text = "Il vous faut vite trouver le levier pour ouvrir la porte.";
         if(konamiCode.konamiCodeComplete == true)
         {
             playerSprite.sprite = newSprite;
