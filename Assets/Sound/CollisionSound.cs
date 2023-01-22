@@ -1,16 +1,25 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class CollisionSound : MonoBehaviour
 {
     public AudioSource audio;
     public GameObject ennemy;
 
+    public TextMeshProUGUI textNbCoup;
+    public TextMeshProUGUI infoBulle;
+
     [SerializeField]
-    private int nbCollision = 0;
+    private int nbMs = 100;
+    private bool untouchable = false;
+
+    [SerializeField]
+    private int nbCollision = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +45,26 @@ public class CollisionSound : MonoBehaviour
 
     private void handleVoid(Collider2D collider)
     {
-        if (collider.tag != "Levier" && collider.tag != "Porte")
-            nbCollision++;
-        if(nbCollision > 3 )
+        if (untouchable)
+            return;
+        StartCoroutine(InvicibilityBuffer());
+        untouchable = true;
+        if (collider.tag != "Levier" && collider.tag != "Porte" && collider.tag != "Collectable" )
+        {
+            nbCollision-=1;
+            textNbCoup.text = nbCollision.ToString();
+        }
+
+        if(nbCollision == 0 )
+        {
+            infoBulle.text = "Vous avez réveillez le monstre. Fuyez !!!";
             ennemy.SetActive(true);
+        }
+    }
+
+    IEnumerator InvicibilityBuffer()
+    {
+        yield return new WaitForSeconds(nbMs / 1000);
+        untouchable = false;
     }
 }

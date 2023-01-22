@@ -37,8 +37,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        text.text = "Il vous faut vite trouver le levier pour ouvrir la porte.";
         if(konamiCode.konamiCodeComplete == true)
         {
+            text.text += " Mais ... Mais... qui ètes vous ?";
             playerSprite.sprite = newSprite;
             // Changez l'animation du joueur en utilisant la référence au composant Animator et le nom de l'état d'animation
             playerAnimator.Play(newAnimationState);
@@ -62,9 +64,15 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log(collider.tag);
         if(collider.tag == "Levier" )
+        {
+            text.text = "Vous vous trouvez près du levier. Tirer le en appuyant sur E";
             isInsideLevier = true;
+        }
         if (collider.tag == "Porte")
+        {
+            text.text = "Vous voici près de la levier. Ouvrez la avec E.";
             isInsidePorte = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D collider)
@@ -82,13 +90,18 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isInsideLevier && !levierHasBeenPool)
         {
-            Debug.Log("Le levier est tirer");
+            text.text = "Levier acctioné. Il vous faut ouvrir la porte sans vous faire attraper par le monstre.";
             levierHasBeenPool = true;
             LevierSprite.changerSprite();
         }
 
-        if (isInsidePorte && levierHasBeenPool)
+        if (isInsidePorte)
         {
+            if(!levierHasBeenPool)
+            {
+                text.text = "Vous n'avez pas encore actionnée le levier.";
+                return;
+            }
             Debug.Log("C'est gagner");
             SceneManager.LoadScene("Win");
         }

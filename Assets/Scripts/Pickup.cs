@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ public class Pickup : MonoBehaviour {
     private Inventory inventory;
     public GameObject itemButton;
     public GameObject effect;
+
+    public TextMeshProUGUI infoBulle;
 
     protected virtual void initialize()
     {
@@ -26,7 +29,6 @@ public class Pickup : MonoBehaviour {
         {
             if (inventory.items[i] == 0)
             {
-                Debug.Log("Je suis la");
                 Instantiate(effect, transform.position, Quaternion.identity);
                 inventory.items[i] = 1;
                 Instantiate(itemButton, inventory.slots[i].transform, false);
@@ -39,6 +41,7 @@ public class Pickup : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) {
+            infoBulle.text = "Vous avez trouvé un objet. Il va désormais etre automatiquement utilisé";
             pickUp(other);
         }
         
