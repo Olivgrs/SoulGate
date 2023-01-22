@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
     public AudioSource audio;
+    public DurabilityBar slider;
 
 
     // Ajoutez une référence au composant Sprite du joueur
@@ -50,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         lvl = 0;
         text.text = "Il vous faut vite trouver le levier pour ouvrir la porte.";
-        if(konamiCode.konamiCodeComplete == true)
+        if (konamiCode.konamiCodeComplete == true)
         {
             text.text += " Mais ... Mais... qui êtes vous ?";
             playerSprite.sprite = newSprite;
@@ -64,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 
     void FixedUpdate()
@@ -75,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log(collider.tag);
-        if(collider.tag == "Levier" )
+        if (collider.tag == "Levier")
         {
             text.text = "Vous vous trouvez prés du levier. Tirer le en appuyant sur E";
             isInsideLevier = true;
@@ -100,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnDeverouillerPorte()
     {
-        if(isInsideLevier && !levierHasBeenPool)
+        if (isInsideLevier && !levierHasBeenPool)
         {
             text.text = "Levier acctioné. Il vous faut ouvrir la porte sans vous faire attraper par le monstre.";
             levierHasBeenPool = true;
@@ -109,20 +110,24 @@ public class PlayerMovement : MonoBehaviour
 
         if (isInsidePorte)
         {
-            if(!levierHasBeenPool)
+            if (!levierHasBeenPool)
             {
                 text.text = "Vous n'avez pas encore actionnée le levier.";
                 return;
-            } if (lvl == 0) {
+            }
+            if (lvl == 0)
+            {
                 Debug.Log("Maze");
                 SceneManager.LoadScene("GameMaze");
                 lvl += 1;
-            } else {
+            }
+            else
+            {
                 SceneManager.LoadScene("Win");
             }
             audio.Play();
             Debug.Log("C'est gagner");
-            
+
         }
     }
 
@@ -138,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnObject1(InputValue val)
     {
-        if(asLight)
+        if (asLight && slider.slider.value > 0)
         {
             resetItems();
             activateLight();
