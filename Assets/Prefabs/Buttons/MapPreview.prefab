@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 222161275583046602}
   - component: {fileID: 114717088732008864}
   - component: {fileID: 114474792728251284}
+  - component: {fileID: 8180791516443381476}
   m_Layer: 5
   m_Name: MapPreview
   m_TagString: Untagged
@@ -119,16 +120,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114717088732008864}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Use
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &8180791516443381476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210040499704410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c136c75ad749844d80af7032598e66f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
