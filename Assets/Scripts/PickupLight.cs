@@ -26,7 +26,7 @@ public class PickupLight : Pickup
     protected override void pickUp(Collider2D other)
     {
         Debug.Log("Je suis surchargé");
-        light.SetActive(true);
+        //light.SetActive(true);
         slider.SetMaxDurability(100);
         slider.decrementValue = decrementValue;
         base.pickUp(other);

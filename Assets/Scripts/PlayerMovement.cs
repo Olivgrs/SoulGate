@@ -38,6 +38,13 @@ public class PlayerMovement : MonoBehaviour
     public Button play;
     public GameObject pause;
 
+    public GameObject light, compass, map, doorPlace;
+
+    public bool ennemy = false;
+    public bool asLight = false;
+    public bool asCompass = false;
+    public bool asMap = false;
+
     private void Start()
     {
         lvl = 0;
@@ -126,6 +133,58 @@ public class PlayerMovement : MonoBehaviour
     public void OnVerticalMovement(InputValue val)
     {
         verticalMovement = val.Get<float>() * moveSpeed * Time.fixedDeltaTime;
+    }
+
+    public void OnObject1(InputValue val)
+    {
+        if(asLight)
+        {
+            resetItems();
+            activateLight();
+        }
+    }
+
+    public void OnObject2(InputValue val)
+    {
+        if (asCompass)
+        {
+            resetItems();
+            activateCompass();
+        }
+    }
+
+    public void OnObject3(InputValue val)
+    {
+        if (asMap)
+        {
+            resetItems();
+            activateMap();
+        }
+    }
+
+    public void activateLight()
+    {
+        light.SetActive(true);
+    }
+
+    public void activateCompass()
+    {
+        compass.SetActive(true);
+    }
+
+    public void activateMap()
+    {
+        doorPlace.SetActive(true);
+        map.SetActive(true);
+    }
+
+    public void resetItems()
+    {
+
+        map.SetActive(false);
+        light.SetActive(false);
+        compass.SetActive(false);
+        doorPlace.SetActive(false);
     }
 
     public void OnPause(InputValue val)

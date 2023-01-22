@@ -11,7 +11,7 @@ public class Compass : MonoBehaviour
 
     private void Start()
     {
-        GameObject.Find("/Item/Canvas/Arrow").SetActive(true);
+        //GameObject.Find("/Item/Canvas/Arrow").SetActive(true);
         arrow = GameObject.Find("/Item/Canvas/Arrow").GetComponent<RectTransform>();
         player = GameObject.Find("/Player");
         quest = GameObject.FindGameObjectWithTag("Levier");
