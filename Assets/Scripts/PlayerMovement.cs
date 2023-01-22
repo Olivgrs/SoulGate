@@ -18,20 +18,21 @@ public class PlayerMovement : MonoBehaviour
     public TextMeshProUGUI text;
 
     public bool isPause = false;
+    private int lvl;
 
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
     public AudioSource audio;
 
 
-    // Ajoutez une référence au composant Sprite du joueur
+    // Ajoutez une rï¿½fï¿½rence au composant Sprite du joueur
     public SpriteRenderer playerSprite;
-    // Ajoutez une référence au sprite que vous souhaitez utiliser
+    // Ajoutez une rï¿½fï¿½rence au sprite que vous souhaitez utiliser
     public Sprite newSprite;
 
-    // Ajoutez une référence au composant Animator du joueur
+    // Ajoutez une rï¿½fï¿½rence au composant Animator du joueur
     public Animator playerAnimator;
-    // Ajoutez une référence au nom de l'état d'animation associé au nouveau sprite
+    // Ajoutez une rï¿½fï¿½rence au nom de l'ï¿½tat d'animation associï¿½ au nouveau sprite
     public string newAnimationState;
 
     public Button play;
@@ -39,14 +40,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        lvl = 0;
         text.text = "Il vous faut vite trouver le levier pour ouvrir la porte.";
         if(konamiCode.konamiCodeComplete == true)
         {
-            text.text += " Mais ... Mais... qui ètes vous ?";
+            text.text += " Mais ... Mais... qui ï¿½tes vous ?";
             playerSprite.sprite = newSprite;
-            // Changez l'animation du joueur en utilisant la référence au composant Animator et le nom de l'état d'animation
+            // Changez l'animation du joueur en utilisant la rï¿½fï¿½rence au composant Animator et le nom de l'ï¿½tat d'animation
             playerAnimator.Play(newAnimationState);
-            Debug.Log("Changement effectué");
+            Debug.Log("Changement effectuï¿½");
         }
         //play.onClick.AddListener(UnPause);
         //pause.SetActive(false);
@@ -67,12 +69,12 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(collider.tag);
         if(collider.tag == "Levier" )
         {
-            text.text = "Vous vous trouvez près du levier. Tirer le en appuyant sur E";
+            text.text = "Vous vous trouvez prï¿½s du levier. Tirer le en appuyant sur E";
             isInsideLevier = true;
         }
         if (collider.tag == "Porte")
         {
-            text.text = "Vous voici près de la levier. Ouvrez la avec E.";
+            text.text = "Vous voici prï¿½s de la levier. Ouvrez la avec E.";
             isInsidePorte = true;
         }
     }
@@ -92,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isInsideLevier && !levierHasBeenPool)
         {
-            text.text = "Levier acctioné. Il vous faut ouvrir la porte sans vous faire attraper par le monstre.";
+            text.text = "Levier acctionï¿½. Il vous faut ouvrir la porte sans vous faire attraper par le monstre.";
             levierHasBeenPool = true;
             LevierSprite.changerSprite();
         }
@@ -101,12 +103,18 @@ public class PlayerMovement : MonoBehaviour
         {
             if(!levierHasBeenPool)
             {
-                text.text = "Vous n'avez pas encore actionnée le levier.";
+                text.text = "Vous n'avez pas encore actionnï¿½e le levier.";
                 return;
+            } if (lvl == 0) {
+                Debug.Log("Maze");
+                SceneManager.LoadScene("GameMaze");
+                lvl += 1;
+            } else {
+                SceneManager.LoadScene("Win");
             }
             audio.Play();
             Debug.Log("C'est gagner");
-            SceneManager.LoadScene("Win");
+            
         }
     }
 
