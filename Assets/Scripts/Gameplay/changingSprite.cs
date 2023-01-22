@@ -6,8 +6,10 @@ public class changingSprite : MonoBehaviour
 {
     public SpriteRenderer levierSprite;
     public Sprite newSprite;
+    public AudioSource audio;
     public void changerSprite ()
     {
         levierSprite.sprite = newSprite;
+        audio.Play();
     }
 }

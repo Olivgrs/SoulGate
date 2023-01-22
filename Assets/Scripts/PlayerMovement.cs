@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
+    public AudioSource audio;
+
 
     // Ajoutez une référence au composant Sprite du joueur
     public SpriteRenderer playerSprite;
@@ -102,6 +104,7 @@ public class PlayerMovement : MonoBehaviour
                 text.text = "Vous n'avez pas encore actionnée le levier.";
                 return;
             }
+            audio.Play();
             Debug.Log("C'est gagner");
             SceneManager.LoadScene("Win");
         }
