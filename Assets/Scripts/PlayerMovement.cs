@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public changingSprite LevierSprite;
     public float moveSpeed;
     public float horizontalMovement, verticalMovement;
     bool isInsidePorte = false;
@@ -59,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        Debug.Log(collider.tag);
         if(collider.tag == "Levier" )
             isInsideLevier = true;
         if (collider.tag == "Porte")
@@ -82,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Le levier est tirer");
             levierHasBeenPool = true;
+            LevierSprite.changerSprite();
         }
 
         if (isInsidePorte && levierHasBeenPool)
