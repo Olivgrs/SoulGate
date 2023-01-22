@@ -32,8 +32,8 @@ public class PlayerMovement : MonoBehaviour
 
     // Ajoutez une référence au composant Animator du joueur
     public Animator playerAnimator;
-    // Ajoutez une référence au nom de l'état d'animation associé au nouveau sprite
-    public string newAnimationState;
+    public RuntimeAnimatorController KonamiCodeAnimator;
+
 
     public Button play;
     public GameObject pause;
@@ -47,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        playerAnimator = GetComponent<Animator>();
         lvl = 0;
         text.text = "Il vous faut vite trouver le levier pour ouvrir la porte.";
         if(konamiCode.konamiCodeComplete == true)
@@ -54,8 +55,8 @@ public class PlayerMovement : MonoBehaviour
             text.text += " Mais ... Mais... qui êtes vous ?";
             playerSprite.sprite = newSprite;
             // Changez l'animation du joueur en utilisant la référence au composant Animator et le nom de l'êtat d'animation
-            playerAnimator.Play(newAnimationState);
-            Debug.Log("Changement effectué");
+            GetComponent<Animator>().runtimeAnimatorController = KonamiCodeAnimator;
+            Debug.Log("Changement effectué + " + newSprite);
         }
         //play.onClick.AddListener(UnPause);
         //pause.SetActive(false);
