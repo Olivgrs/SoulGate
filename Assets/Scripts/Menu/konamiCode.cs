@@ -29,7 +29,7 @@ public class konamiCode : MonoBehaviour
             {
                 Debug.Log("Code Konami entré ! Voici votre message secret : \"Ce n'est qu'un début\" ");
                 konamiCodeComplete = true;
-                SceneManager.LoadScene("QuentinScene");
+                SceneManager.LoadScene("Game");
                 /*SpriteRenderer sr = player.GetComponent<SpriteRenderer>();
                 sr.sprite = newSprite;*/
                 currentIndex = 0;
