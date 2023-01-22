@@ -6,6 +6,7 @@ public class ApplicationManager : MonoBehaviour {
 	
 	public GameObject Canva;
 	public GameObject SFScene;
+	public GameObject EventSys;
 	public void Quit () 
 	{
 		#if UNITY_EDITOR
@@ -18,6 +19,7 @@ public class ApplicationManager : MonoBehaviour {
 	public void LoadFirstLevel()
     {
 		Canva.SetActive(false);
+		Destroy(EventSys);
 		if(SFScene != null)
 			SFScene.SetActive(false);
         SceneManager.LoadScene("Game", LoadSceneMode.Additive);
