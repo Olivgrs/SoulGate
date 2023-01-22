@@ -18,6 +18,8 @@ public class CollisionSound : MonoBehaviour
     private int nbMs = 100;
     private bool untouchable = false;
 
+    public PlayerMovement playerMovement;
+
     [SerializeField]
     private int nbCollision = 3;
     // Start is called before the first frame update
@@ -59,6 +61,7 @@ public class CollisionSound : MonoBehaviour
         {
             infoBulle.text = "Vous avez réveillez le monstre. Fuyez !!!";
             ennemy.SetActive(true);
+            playerMovement.ennemy = true;
         }
     }
 

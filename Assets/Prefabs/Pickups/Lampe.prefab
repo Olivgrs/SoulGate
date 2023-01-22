@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 897263278996733908}
   m_Layer: 0
   m_Name: Lampe
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 1962494962737066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.31, y: -6.1, z: 0}
-  m_LocalScale: {x: 1.6418848, y: 1.6418847, z: 1.6418847}
+  m_LocalScale: {x: 1.9942974, y: 2.1453197, z: 0.974968}
   m_Children:
   - {fileID: 4010122711295680}
   m_Father: {fileID: 0}
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -197,5 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1050184551804244, guid: 8e476d81073b3624c8b12a1e0376b5e5, type: 3}
   effect: {fileID: 1320962406381760, guid: 06168afec4da0964ea6fd6f69f7c8b90, type: 3}
+  infoBulle: {fileID: 0}
+  typeObject: 0
+  player: {fileID: 0}
   light: {fileID: 0}
   slider: {fileID: 0}
