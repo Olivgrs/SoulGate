@@ -6619,6 +6619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1375599795}
   lerpSpeed: 2.5
+  audio: {fileID: 519420034}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -6925,6 +6926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   lerpSpeed: 2.5
+  audio: {fileID: 0}
 --- !u!20 &523480936
 Camera:
   m_ObjectHideFlags: 0
