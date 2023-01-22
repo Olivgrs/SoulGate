@@ -25931,7 +25931,7 @@ MonoBehaviour:
   playerSprite: {fileID: 1375599794}
   newSprite: {fileID: 21300000, guid: 5496093941ea54b49905ba4f1b83189c, type: 3}
   playerAnimator: {fileID: 1375599789}
-  newAnimationState: Idle_KonamiCode
+  KonamiCodeAnimator: {fileID: 9100000, guid: 3f8753e2792df6e4f85ec39e9f0099a2, type: 2}
   play: {fileID: 666863659}
   pause: {fileID: 666863660}
   light: {fileID: 853814487}
