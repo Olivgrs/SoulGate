@@ -25,7 +25,6 @@ public class ApplicationManager : MonoBehaviour {
         SceneManager.LoadScene("Game");
     }
 
-
     public void LoadMenu()
     {
 		Canva.SetActive(false);
