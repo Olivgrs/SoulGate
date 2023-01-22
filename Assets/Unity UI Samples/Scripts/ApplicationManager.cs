@@ -25,6 +25,10 @@ public class ApplicationManager : MonoBehaviour {
         SceneManager.LoadScene("Game");
     }
 
+	public void LoadCredit()
+    {
+        SceneManager.LoadScene("Credit");
+    }
 
     public void LoadMenu()
     {
