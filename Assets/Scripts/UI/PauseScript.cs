@@ -27,7 +27,7 @@ public class PauseScript : MonoBehaviour
 
     public void OnClickMenu()
     {
-        SceneManager.LoadScene("Menu");
+        //SceneManager.LoadScene("Menu");
     }
 
     public void OnClickQuit()
