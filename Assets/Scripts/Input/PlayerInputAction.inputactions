@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "DroapItems",
+                    "type": "Button",
+                    "id": "f81c2163-aea9-402a-8b01-9f4304af6eef",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -174,6 +183,17 @@
                     "processors": "",
                     "groups": "Keyboard & Mouse",
                     "action": "DeverouillerPorte",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "acc3fd51-e1c6-4e80-b11e-281b81c06224",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DroapItems",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

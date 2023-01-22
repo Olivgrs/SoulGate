@@ -53,6 +53,15 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DroapItems"",
+                    ""type"": ""Button"",
+                    ""id"": ""f81c2163-aea9-402a-8b01-9f4304af6eef"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -198,6 +207,17 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""action"": ""DeverouillerPorte"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""acc3fd51-e1c6-4e80-b11e-281b81c06224"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DroapItems"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -226,6 +246,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         m_Player_HorizontalMovement = m_Player.FindAction("HorizontalMovement", throwIfNotFound: true);
         m_Player_VerticalMovement = m_Player.FindAction("VerticalMovement", throwIfNotFound: true);
         m_Player_DeverouillerPorte = m_Player.FindAction("DeverouillerPorte", throwIfNotFound: true);
+        m_Player_DroapItems = m_Player.FindAction("DroapItems", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -288,6 +309,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_HorizontalMovement;
     private readonly InputAction m_Player_VerticalMovement;
     private readonly InputAction m_Player_DeverouillerPorte;
+    private readonly InputAction m_Player_DroapItems;
     public struct PlayerActions
     {
         private @PlayerInputAction m_Wrapper;
@@ -295,6 +317,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         public InputAction @HorizontalMovement => m_Wrapper.m_Player_HorizontalMovement;
         public InputAction @VerticalMovement => m_Wrapper.m_Player_VerticalMovement;
         public InputAction @DeverouillerPorte => m_Wrapper.m_Player_DeverouillerPorte;
+        public InputAction @DroapItems => m_Wrapper.m_Player_DroapItems;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -313,6 +336,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @DeverouillerPorte.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDeverouillerPorte;
                 @DeverouillerPorte.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDeverouillerPorte;
                 @DeverouillerPorte.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDeverouillerPorte;
+                @DroapItems.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDroapItems;
+                @DroapItems.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDroapItems;
+                @DroapItems.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDroapItems;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -326,6 +352,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @DeverouillerPorte.started += instance.OnDeverouillerPorte;
                 @DeverouillerPorte.performed += instance.OnDeverouillerPorte;
                 @DeverouillerPorte.canceled += instance.OnDeverouillerPorte;
+                @DroapItems.started += instance.OnDroapItems;
+                @DroapItems.performed += instance.OnDroapItems;
+                @DroapItems.canceled += instance.OnDroapItems;
             }
         }
     }
@@ -344,5 +373,6 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         void OnHorizontalMovement(InputAction.CallbackContext context);
         void OnVerticalMovement(InputAction.CallbackContext context);
         void OnDeverouillerPorte(InputAction.CallbackContext context);
+        void OnDroapItems(InputAction.CallbackContext context);
     }
 }
