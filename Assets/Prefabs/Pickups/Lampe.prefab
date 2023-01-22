@@ -153,10 +153,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -105541197
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4cea9c2f325cd46be8567f42177a3ff3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9b9630a1ae64ff4fa8c1bc6f98abeec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -197,3 +197,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1050184551804244, guid: 8e476d81073b3624c8b12a1e0376b5e5, type: 3}
   effect: {fileID: 1320962406381760, guid: 06168afec4da0964ea6fd6f69f7c8b90, type: 3}
+  light: {fileID: 0}
+  slider: {fileID: 0}

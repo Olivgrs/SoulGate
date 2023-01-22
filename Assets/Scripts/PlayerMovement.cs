@@ -3,9 +3,11 @@ using System;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public changingSprite LevierSprite;
     public float moveSpeed;
     public float horizontalMovement, verticalMovement;
     bool isInsidePorte = false;
@@ -35,8 +37,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        text.text = "Il vous faut vite trouver le levier pour ouvrir la porte.";
         if(konamiCode.konamiCodeComplete == true)
         {
+            text.text += " Mais ... Mais... qui ètes vous ?";
             playerSprite.sprite = newSprite;
             // Changez l'animation du joueur en utilisant la référence au composant Animator et le nom de l'état d'animation
             playerAnimator.Play(newAnimationState);
@@ -58,10 +62,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        Debug.Log(collider.tag);
         if(collider.tag == "Levier" )
+        {
+            text.text = "Vous vous trouvez près du levier. Tirer le en appuyant sur E";
             isInsideLevier = true;
+        }
         if (collider.tag == "Porte")
+        {
+            text.text = "Vous voici près de la levier. Ouvrez la avec E.";
             isInsidePorte = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D collider)
@@ -75,15 +86,24 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
     }
 
-    public void DeverouillerPorte()
+    public void OnDeverouillerPorte()
     {
         if(isInsideLevier && !levierHasBeenPool)
-            levierHasBeenPool=true;
-
-        if (isInsidePorte && levierHasBeenPool)
         {
-            text.text = "victoire";
-            text.enabled = true;
+            text.text = "Levier acctioné. Il vous faut ouvrir la porte sans vous faire attraper par le monstre.";
+            levierHasBeenPool = true;
+            LevierSprite.changerSprite();
+        }
+
+        if (isInsidePorte)
+        {
+            if(!levierHasBeenPool)
+            {
+                text.text = "Vous n'avez pas encore actionnée le levier.";
+                return;
+            }
+            Debug.Log("C'est gagner");
+            SceneManager.LoadScene("Win");
         }
     }
 
