@@ -25933,6 +25933,7 @@ MonoBehaviour:
   isPause: 0
   rb: {fileID: 1375599792}
   audio: {fileID: 1898445049380245}
+  slider: {fileID: 694930950}
   playerSprite: {fileID: 1375599794}
   newSprite: {fileID: 21300000, guid: 5496093941ea54b49905ba4f1b83189c, type: 3}
   playerAnimator: {fileID: 1375599789}
