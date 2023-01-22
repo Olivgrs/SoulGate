@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game/GameMaze.unity
     guid: 3905c5bb8697f4d738e4712e5ce99db4
+  - enabled: 1
+    path: Assets/Scenes/Credit.unity
+    guid: ada9762095b5845cc94acaff4720c997
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: bcdbc2ac7607c114787d8323f19f6ab2,
       type: 2}
