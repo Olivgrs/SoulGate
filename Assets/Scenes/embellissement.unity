@@ -14623,6 +14623,8 @@ MonoBehaviour:
   itemButton: {fileID: 1050184551804244, guid: 8e476d81073b3624c8b12a1e0376b5e5, type: 3}
   effect: {fileID: 1320962406381760, guid: 06168afec4da0964ea6fd6f69f7c8b90, type: 3}
   infoBulle: {fileID: 0}
+  typeObject: 0
+  player: {fileID: 0}
 --- !u!58 &202235498
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -80521,12 +80523,21 @@ MonoBehaviour:
   text: {fileID: 188673284}
   isPause: 0
   rb: {fileID: 1375599792}
+  audio: {fileID: 0}
   playerSprite: {fileID: 0}
   newSprite: {fileID: 0}
   playerAnimator: {fileID: 0}
   newAnimationState: 
   play: {fileID: 0}
   pause: {fileID: 0}
+  light: {fileID: 0}
+  compass: {fileID: 0}
+  map: {fileID: 0}
+  doorPlace: {fileID: 0}
+  ennemy: 0
+  asLight: 0
+  asCompass: 0
+  asMap: 0
 --- !u!212 &1375599794
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -80720,6 +80731,7 @@ MonoBehaviour:
   textNbCoup: {fileID: 0}
   infoBulle: {fileID: 0}
   nbMs: 100
+  playerMovement: {fileID: 0}
   nbCollision: 0
 --- !u!114 &1375599799
 MonoBehaviour:
@@ -82462,12 +82474,21 @@ MonoBehaviour:
   text: {fileID: 0}
   isPause: 0
   rb: {fileID: 1421614666}
+  audio: {fileID: 0}
   playerSprite: {fileID: 0}
   newSprite: {fileID: 0}
   playerAnimator: {fileID: 0}
   newAnimationState: 
   play: {fileID: 0}
   pause: {fileID: 0}
+  light: {fileID: 0}
+  compass: {fileID: 0}
+  map: {fileID: 0}
+  doorPlace: {fileID: 0}
+  ennemy: 0
+  asLight: 0
+  asCompass: 0
+  asMap: 0
 --- !u!61 &1421614669
 BoxCollider2D:
   m_ObjectHideFlags: 0
