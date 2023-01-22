@@ -9,6 +9,9 @@ public class PickupLight : Pickup
 
     public GameObject light;
     public DurabilityBar slider;
+
+    [SerializeField]
+    private const float decrementValue = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +28,7 @@ public class PickupLight : Pickup
         Debug.Log("Je suis surchargé");
         light.SetActive(true);
         slider.SetMaxDurability(100);
-        slider.decrementValue = 1f;
+        slider.decrementValue = decrementValue;
         base.pickUp(other);
     }
 }
