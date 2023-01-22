@@ -24,9 +24,9 @@ public class ApplicationManager : MonoBehaviour {
     }
 
 
-    public void LoadSecondLevel()
+    public void LoadMenu()
     {
 		Canva.SetActive(false);
-        SceneManager.LoadScene("SinglePlanet", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
     }
 }
