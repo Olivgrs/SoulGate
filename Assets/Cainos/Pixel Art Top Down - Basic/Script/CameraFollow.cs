@@ -14,11 +14,15 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private Vector3 targetPos;
 
+        public AudioSource audio;
+
         private void Start()
         {
             if (target == null) return;
 
             offset = transform.position - target.position;
+
+            audio.volume = ManageVolume.volume;
         }
 
         private void Update()

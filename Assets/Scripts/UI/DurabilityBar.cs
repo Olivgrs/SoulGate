@@ -10,10 +10,15 @@ public class DurabilityBar : MonoBehaviour
     public GameObject ennemy;
     public GameObject light;
 
+    public Gradient gradient;
+    public Image fill;
+
     public void SetMaxDurability(int durability)
     {
         slider.maxValue = durability;
         slider.value = durability;
+
+        fill.color = gradient.Evaluate(1f);
     }
 
     void Start()
@@ -26,6 +31,7 @@ public class DurabilityBar : MonoBehaviour
         while (slider.value > 0)
         {
             slider.value -= decrementValue;
+            fill.color = gradient.Evaluate(slider.normalizedValue);
             if (slider.value <= 0)
             {
                 light.SetActive(false);

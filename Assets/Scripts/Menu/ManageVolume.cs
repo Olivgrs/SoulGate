@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ManageVolume : MonoBehaviour
 {
+    public static float volume = 1f;
     public AudioSource m_MyAudioSource;
     public UnityEngine.UI.Slider m_mySlider;
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class ManageVolume : MonoBehaviour
     {
         m_mySlider.onValueChanged.AddListener((value) =>
         {
+            volume = value;
             m_MyAudioSource.volume = value;
         });
     }

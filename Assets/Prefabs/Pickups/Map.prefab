@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 114695389263339990}
   m_Layer: 0
   m_Name: Map
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 1954627578700332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.3871613, y: 1.3233368, z: 0}
-  m_LocalScale: {x: 1.4949628, y: 1.4949629, z: 1.4949629}
+  m_LocalScale: {x: 1.1771957, y: 1.3192126, z: 0.30482292}
   m_Children:
   - {fileID: 4911570187808942}
   m_Father: {fileID: 0}
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -195,5 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ba07c79ec7fdf4c8defbc9b19ea8a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 1950729669058624, guid: b1d00167fc3a9044a91fa627cdd2be58, type: 3}
+  itemButton: {fileID: 1210040499704410, guid: fa99184f8f6a16b4eaa31513b4c94000, type: 3}
   effect: {fileID: 1320962406381760, guid: 06168afec4da0964ea6fd6f69f7c8b90, type: 3}
+  infoBulle: {fileID: 0}
+  typeObject: 2
+  player: {fileID: 0}
