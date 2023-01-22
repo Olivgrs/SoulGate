@@ -3495,6 +3495,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 849874941}
     m_Modifications:
+    - target: {fileID: 3256064665225810532, guid: 78e9efbdf9b33994da8dfbe530f65e5e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
     - target: {fileID: 6075975974975622417, guid: 78e9efbdf9b33994da8dfbe530f65e5e,
         type: 3}
       propertyPath: m_RootOrder
@@ -3554,6 +3559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Stair M
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075975976084253374, guid: 78e9efbdf9b33994da8dfbe530f65e5e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
@@ -4735,6 +4745,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 849874941}
     m_Modifications:
+    - target: {fileID: 3256064665225810532, guid: 78e9efbdf9b33994da8dfbe530f65e5e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
     - target: {fileID: 6075975974917516961, guid: 78e9efbdf9b33994da8dfbe530f65e5e,
         type: 3}
       propertyPath: m_TagString
@@ -4799,6 +4814,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Stair M (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075975976084253374, guid: 78e9efbdf9b33994da8dfbe530f65e5e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78e9efbdf9b33994da8dfbe530f65e5e, type: 3}
@@ -5649,6 +5669,12 @@ PrefabInstance:
       propertyPath: infoBulle
       value: 
       objectReference: {fileID: 1227815178}
+    - target: {fileID: 114695389263339990, guid: c2551413c5ef80840a0a04a9177bb3a2,
+        type: 3}
+      propertyPath: itemButton
+      value: 
+      objectReference: {fileID: 1210040499704410, guid: fa99184f8f6a16b4eaa31513b4c94000,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2551413c5ef80840a0a04a9177bb3a2, type: 3}
 --- !u!4 &464224345 stripped
@@ -6592,7 +6618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.82, y: 2.9300003, z: -10}
+  m_LocalPosition: {x: 3.49, y: 0.14, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 523480933}
@@ -14956,6 +14982,12 @@ PrefabInstance:
       propertyPath: infoBulle
       value: 
       objectReference: {fileID: 1227815178}
+    - target: {fileID: 114445420681874740, guid: 5aeb03f0a3b959f4dbdebc4439003715,
+        type: 3}
+      propertyPath: itemButton
+      value: 
+      objectReference: {fileID: 1950729669058624, guid: b1d00167fc3a9044a91fa627cdd2be58,
+        type: 3}
     - target: {fileID: 212430309204672892, guid: 5aeb03f0a3b959f4dbdebc4439003715,
         type: 3}
       propertyPath: m_Sprite
@@ -17889,6 +17921,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 849874941}
     m_Modifications:
+    - target: {fileID: 3256064665225810532, guid: a92434f05fc24a2408687e0356655548,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
     - target: {fileID: 6075975974975622417, guid: a92434f05fc24a2408687e0356655548,
         type: 3}
       propertyPath: m_RootOrder
@@ -17948,6 +17985,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Stair L
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075975976084253374, guid: a92434f05fc24a2408687e0356655548,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a92434f05fc24a2408687e0356655548, type: 3}
@@ -26264,6 +26306,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 459523096}
     m_Modifications:
+    - target: {fileID: 3256064665225810532, guid: 78e9efbdf9b33994da8dfbe530f65e5e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
     - target: {fileID: 4442653431165992162, guid: 78e9efbdf9b33994da8dfbe530f65e5e,
         type: 3}
       propertyPath: layer
@@ -26363,6 +26410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayerID
       value: -44025399
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075975976084253374, guid: 78e9efbdf9b33994da8dfbe530f65e5e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
       objectReference: {fileID: 0}
     - target: {fileID: 6223746544896227164, guid: 78e9efbdf9b33994da8dfbe530f65e5e,
         type: 3}
@@ -37679,6 +37731,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 849874941}
     m_Modifications:
+    - target: {fileID: 3256064665225810532, guid: b7a5fce6e52ebbf488a8e8516c6692cb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
+      objectReference: {fileID: 0}
     - target: {fileID: 6075975974975622417, guid: b7a5fce6e52ebbf488a8e8516c6692cb,
         type: 3}
       propertyPath: m_RootOrder
@@ -37738,6 +37795,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF Props Stair Broken R
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075975976084253374, guid: b7a5fce6e52ebbf488a8e8516c6692cb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Collectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7a5fce6e52ebbf488a8e8516c6692cb, type: 3}
