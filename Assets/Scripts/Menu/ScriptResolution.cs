@@ -41,6 +41,6 @@ public class ScriptResolution : MonoBehaviour
                 break;
         }
         if (isChange)
-            Screen.SetResolution(f, s, FullScreenMode.ExclusiveFullScreen);
+            Screen.SetResolution(f, s,FullScreenMode.FullScreenWindow);
     }
 }

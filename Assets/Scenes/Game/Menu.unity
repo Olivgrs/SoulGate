@@ -640,7 +640,7 @@ MonoBehaviour:
       - m_Target: {fileID: 557638310}
         m_TargetAssemblyTypeName: ScriptResolution, Assembly-CSharp
         m_MethodName: HandleInputData
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1970,7 +1970,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557638307}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 856ae3b18a057fe4e80632aa11d7b759, type: 3}
@@ -3239,10 +3239,10 @@ RectTransform:
   m_Father: {fileID: 1235861151}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchorMin: {x: 0.8, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -150, y: 0}
-  m_SizeDelta: {x: 300, y: 500}
+  m_SizeDelta: {x: 300, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &928992391
 PrefabInstance:
